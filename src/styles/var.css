@@ -1,0 +1,44 @@
+:root{
+/*通用的边框颜色，包括输入框，表格，按钮，下拉框等*/
+--color-border-common:#dedede;
+/*通用的鼠标悬浮背景颜色*/
+--color-hover-background-common:#248bf2;
+
+/*通用的边框，包括输入框，表格，按钮，下拉框等*/
+--border-common:1px solid var(--color-border-common);
+/**通用的鼠标悬浮边框颜色*/
+--color-border-hover: #248bf2;
+/**通用的悬浮阴影*/
+--box-shadow-hover-common: 0 2px 4px rgba(0, 0, 0, 0.15);
+/**通用的弹窗遮罩层的背景颜色*/
+--color-modal-block-background: rgba(0,0,0,0.3);
+/**黑色*/
+--color-black:#333333;
+/**黑色*/
+--color-gray:#888888;
+/**白色*/
+--color-white:#ffffff;
+/**主题色*/
+--color-primary:#248bf2;
+/**链接颜色*/
+--color-link:#248bf2;
+
+/**主字体题色*/
+--color-font:#444444;
+--color-red:#ff3333;
+/**消息提示颜色定义*/
+--color-success: #2dcc14;
+--color-success-light: #57d643;
+--color-success-dark: #28b711;
+
+--color-warn: #ff8000;
+--color-warn-light: #ff9933;
+--color-warn-dark: #e57200;
+
+--color-danger: #e53823;
+--color-danger-light: #ea5f4f;
+--color-danger-dark: #cd321f;
+/*通用的边框颜色，包括输入框，表格，按钮，下拉框等*/
+--color-border-common:#dedede;
+/*通用的边框，包括输入框，表格，按钮，下拉框等*/
+--border-common:1px solid var(--color-border-common);}

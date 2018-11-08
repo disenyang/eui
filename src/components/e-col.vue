@@ -1,0 +1,105 @@
+
+	<template>
+	<div class="cell-wrapper" :style="{width:width,height:height,flex:span,flexDirection:direction,paddingLeft:paddingLeft,paddingRight:paddingRight,paddingTop:paddingTop,paddingBottom:paddingBottom,marginLeft:marginLeft,marginRight:marginRight,marginTop:marginTop,marginBottom:marginBottom,borderLeft:borderLeft,borderRight:borderRight,borderTop:borderTop,borderBottom:borderBottom,justifyContent:justifyContent,alignItems:alignItems,backgroundColor:backgroundColor,backgroundImage:backgroundImage,backgroundRepeat:backgroundRepeat,backgroundPosition:backgroundPosition,backgroundSize:backgroundSize,borderRadius:borderRadius,boxShadow:boxShadow}">
+    <slot></slot>
+</div> 
+</template>
+<script>
+	import Utils from 'utils';
+	export default {
+	name:"e-col",
+	mixins:[Utils.zindex,Utils.emitter,Utils.popper,Utils.mixins],
+    data(){
+        return {
+            
+        }
+    },
+    config:{
+        insert:{
+            inner:true,
+            before:true,
+            after:true
+        }
+    },
+    created(){
+    
+    },
+    unProps:{
+        "v-if":{"name":"是否创建","desc":"是否创建"},"v-show":{"name":"是否显示","desc":"是否显示"},"click":{"name":"单击事件","desc":"单击事件","propType":"event"},"dblclick":{"name":"双击事件","desc":"双击事件","propType":"event"},"mouseover":{"name":"鼠标over","desc":"鼠标over","propType":"event"},"mouseout":{"name":"鼠标离开","desc":"鼠标离开","propType":"event"}
+    },
+    props:{
+        span:{
+            type:Number,
+            name:"格数",
+            desc:"格数,100px表示100宽度,1表示flex=1"
+        },
+        justifyContent:{
+            type:Number,
+            name:"主轴对齐",
+            desc:"主轴对齐",
+            values:[
+                {
+                    lab:"开始",
+                    val:"flex-start"
+                },
+                {
+                    lab:"居中",
+                    val:"center"
+                },
+                {
+                    lab:"结束",
+                    val:"flex-end"
+                }
+            ]
+        },
+        alignItems:{
+            type:Number,
+            name:"交叉轴对齐",
+            desc:"交叉轴对齐",
+            values:[
+                {
+                    lab:"开始",
+                    val:"flex-start"
+                },
+                {
+                    lab:"居中",
+                    val:"center"
+                },
+                {
+                    lab:"结束",
+                    val:"flex-end"
+                }
+            ]
+        },
+        direction:{
+            name:"方向",
+            type:Number,
+            default:"row",
+            desc:"方向",
+            values:[
+                {
+                    lab:"水平",
+                    val:"row"
+                },
+                {
+                    lab:"垂直",
+                    val:"column"
+                }
+           ]     
+        },
+        "ref":{"name":"组件引用","desc":"组件引用"},"width":{"name":"宽度","desc":"宽度","propType":"style"},"height":{"name":"高度","desc":"高度","propType":"style"},"paddingLeft":{"name":"左内边距","desc":"左内边距","propType":"style"},"paddingRight":{"name":"右内边距","desc":"右内边距","propType":"style"},"paddingTop":{"name":"顶内边距","desc":"顶内边距","propType":"style"},"paddingBottom":{"name":"底内边距","desc":"底内边距","propType":"style"},"marginLeft":{"name":"左外边距","desc":"左外边距","propType":"style"},"marginRight":{"name":"右外边距","desc":"右外边距","propType":"style"},"marginTop":{"name":"顶外边距","desc":"顶外边距","propType":"style"},"marginBottom":{"name":"底外边距","desc":"底外边距","propType":"style"},"borderLeft":{"name":"左边框","desc":"左边框","propType":"style"},"borderRight":{"name":"右边框","desc":"右边框","propType":"style"},"borderTop":{"name":"顶边框","desc":"顶边框","propType":"style"},"borderBottom":{"name":"底边框","desc":"底边框","propType":"style"},"backgroundColor":{"name":"背景颜色","desc":"背景颜色","propType":"style"},"backgroundImage":{"name":"背景图片","desc":"背景图片","propType":"style"},"backgroundRepeat":{"name":"背景重复","desc":"背景重复","propType":"style"},"backgroundPosition":{"name":"背景位置","desc":"背景位置","propType":"style"},"backgroundSize":{"name":"背景大小","desc":"背景大小","propType":"style"},"fontSize":{"name":"字体大小","desc":"字体大小","propType":"style"},"boxShadow":{"name":"盒子阴影","desc":"盒子阴影","propType":"style"},"color":{"name":"字体颜色","desc":"字体颜色","propType":"style"},"fontWeight":{"name":"字体粗细","desc":"字体粗细","propType":"style"},"borderRadius":{"name":"圆角半径","desc":"圆角半径","propType":"style"}
+    }
+}
+</script>
+<style>
+    @import '../../public/styles/var.css';
+	.cell-wrapper{
+    min-width:20px;
+    min-height:20px;
+    box-sizing:border-box;
+    width:100%;
+    height:100%;
+    display:flex;
+    position:relative;
+}
+</style>
